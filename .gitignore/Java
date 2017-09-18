@@ -171,9 +171,9 @@ function calcTotal(form) {
 	var FEEmiscs = 0;
 
 /* Ethnic Student Center Fee */
-	var FEEsc1 = 10;
-	var FEEescw = 10;
-	var FEEescs = 10;
+	var FEEesc = 0;
+	var FEEescw = 0;
+	var FEEescs = 0;
 
  	
 /* load number of credit */
@@ -246,9 +246,11 @@ function calcTotal(form) {
 			FEEnab = 45;
 			FEErec = 101.20;
 			FEEtrfee = 26.25;
+			FEEesc = 30.00;
 		}
 		else
 		{
+			FEEesc = 0;
 			FEEt = 17.50;
 			FEEla = 1;
 		}
@@ -259,9 +261,11 @@ function calcTotal(form) {
 			FEEnabw = 45;
 			FEErecw = 101.20;
 			FEEtrfeew = 26.25;
+			FEEescw = 30.00;
 		}
 		else
 		{
+			FEEescw = 0;
 			FEEtw = 17.50;
 			FEElaw = 1;
 		}
@@ -272,9 +276,11 @@ function calcTotal(form) {
 			FEEnabs = 45;
 			FEErecs = 101.20;
 			FEEtrfees = 26.25;
+			FEEescs = 30.00;
 		}
 		else
 		{
+			FEEescs = 0;
 			FEEts = 17.50;
 			FEElas = 1;
 		}
@@ -383,13 +389,13 @@ function calcTotal(form) {
 
 	TOTtuition = TOTtuition + FEEsaf + FEEsaw + FEEsas;
 
-	TOTfeef = FEEhs + FEEla + FEEt + FEEnab + FEErec + FEEtrfee + FEEref + FEEor + FEEcrs + FEEbook + FEEtransp + FEEmisc + FEEpkg;
-	TOTfeew = FEEhsw + FEElaw + FEEtw + FEEnabw + FEErecw + FEEtrfeew + FEErefw + FEEcrsw + FEEbookw + FEEtranspw + FEEmiscw + FEEpkgw;
-	TOTfees = FEEhss + FEElas + FEEts + FEEnabs + FEErecs + FEEtrfees + FEErefs + FEEcrss + FEEbooks + FEEtransps + FEEmiscs + FEErecs + FEEpkgs;
+	TOTfeef = FEEhs + FEEla + FEEt + FEEnab + FEErec + FEEtrfee + FEEref + FEEor + FEEcrs + FEEbook + FEEtransp + FEEmisc + FEEesc + FEEpkg;
+	TOTfeew = FEEhsw + FEElaw + FEEtw + FEEnabw + FEErecw + FEEtrfeew + FEErefw + FEEcrsw + FEEbookw + FEEtranspw + FEEmiscw + FEEescw + FEEpkgw;
+	TOTfees = FEEhss + FEElas + FEEts + FEEnabs + FEErecs + FEEtrfees + FEErefs + FEEcrss + FEEbooks + FEEtransps + FEEmiscs + FEErecs + FEEescs + FEEpkgs;
 	TOTfeeyr = TOTfeef + TOTfeew + TOTfees;
-	TOTmandf = FEEhs + FEEla + FEEt + FEEnab + FEErec + FEEtrfee + FEEref + FEEor + FEEcrs;
-	TOTmandw = FEEhsw + FEElaw + FEEtw + FEEnabw + FEErecw + FEEtrfeew + FEErefw + FEEcrsw;
-	TOTmands = FEEhss + FEElas + FEEts + FEEnabs + FEErecs + FEEtrfees + FEErefs + FEEcrss;
+	TOTmandf = FEEhs + FEEla + FEEt + FEEnab + FEErec + FEEtrfee + FEEref + FEEor + FEEcrs + FEEesc;
+	TOTmandw = FEEhsw + FEElaw + FEEtw + FEEnabw + FEErecw + FEEtrfeew + FEErefw + FEEcrsw + FEEescw;
+	TOTmands = FEEhss + FEElas + FEEts + FEEnabs + FEErecs + FEEtrfees + FEErefs + FEEcrss + FEEescs;
 
 	form.TOTcredits.value = yrcredit;
 	form.TOTtuitf.value = TOTtuitf.toFixed(2);
@@ -425,6 +431,9 @@ function calcTotal(form) {
 	form.FEErefw.value = FEErefw.toFixed(2);
 	form.FEErefs.value = FEErefs.toFixed(2);
 	form.FEEor.value = FEEor.toFixed(2);
+	form.FEEesc.value = FEEesc.toFixed(2);
+	form.FEEescw.value = FEEescs.toFixed(2);
+	form.FEEescs.value = FEEescw.toFixed(2);
 
 /*	form.FEEpkg.value = FEEpkg */
 
