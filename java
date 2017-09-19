@@ -169,6 +169,11 @@ function calcTotal(form) {
 	var FEEmisc = 0;
 	var FEEmiscw = 0;
 	var FEEmiscs = 0;
+	
+/* Ethnic Student Center varible*/
+	var FEEesc = 0;
+	var FEEescw = 0;
+	var FEEescs =0;
 
 /* load number of credit */
 	creditArray[0]=form.fallqtr.selectedIndex;
@@ -240,6 +245,7 @@ function calcTotal(form) {
 			FEEnab = 45;
 			FEErec = 101.20;
 			FEEtrfee = 26.25;
+			FEEesc = 30.00;
 		}
 		else
 		{
@@ -253,6 +259,7 @@ function calcTotal(form) {
 			FEEnabw = 45;
 			FEErecw = 101.20;
 			FEEtrfeew = 26.25;
+			FEEescw = 30.00;
 		}
 		else
 		{
@@ -266,6 +273,7 @@ function calcTotal(form) {
 			FEEnabs = 45;
 			FEErecs = 101.20;
 			FEEtrfees = 26.25;
+			FEEescs = 30.00;
 		}
 		else
 		{
@@ -377,9 +385,9 @@ function calcTotal(form) {
 
 	TOTtuition = TOTtuition + FEEsaf + FEEsaw + FEEsas;
 
-	TOTfeef = FEEhs + FEEla + FEEt + FEEnab + FEErec + FEEtrfee + FEEref + FEEor + FEEcrs + FEEbook + FEEtransp + FEEmisc + FEEpkg;
-	TOTfeew = FEEhsw + FEElaw + FEEtw + FEEnabw + FEErecw + FEEtrfeew + FEErefw + FEEcrsw + FEEbookw + FEEtranspw + FEEmiscw + FEEpkgw;
-	TOTfees = FEEhss + FEElas + FEEts + FEEnabs + FEErecs + FEEtrfees + FEErefs + FEEcrss + FEEbooks + FEEtransps + FEEmiscs + FEEpkgs;
+	TOTfeef = FEEhs + FEEla + FEEt + FEEnab + FEErec + FEEtrfee + FEEref + FEEor + FEEcrs + FEEbook + FEEtransp + FEEmisc + FEEpkg + FEEesc;
+	TOTfeew = FEEhsw + FEElaw + FEEtw + FEEnabw + FEErecw + FEEtrfeew + FEErefw + FEEcrsw + FEEbookw + FEEtranspw + FEEmiscw + FEEpkgw + FEEescw;
+	TOTfees = FEEhss + FEElas + FEEts + FEEnabs + FEErecs + FEEtrfees + FEErefs + FEEcrss + FEEbooks + FEEtransps + FEEmiscs + FEEpkgs + FEEescs;
 	TOTfeeyr = TOTfeef + TOTfeew + TOTfees;
 	TOTmandf = FEEhs + FEEla + FEEt + FEEnab + FEErec + FEEtrfee + FEEref + FEEor + FEEcrs;
 	TOTmandw = FEEhsw + FEElaw + FEEtw + FEEnabw + FEErecw + FEEtrfeew + FEErefw + FEEcrsw;
